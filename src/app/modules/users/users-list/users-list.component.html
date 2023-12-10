@@ -20,29 +20,13 @@
               </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>mdo</td>
-                <td><a routerLink="edit/1" class="btn btn-primary">Edit</a></td>
-                <td><button class="btn btn-danger">delete</button></td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>mdo</td>
-                <td><button class="btn btn-primary">Edit</button></td>
-                <td><button class="btn btn-danger">delete</button></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>Thornton</td>
-                <td>mdo</td>
-                <td><button class="btn btn-primary">Edit</button></td>
-                <td><button class="btn btn-danger">delete</button></td>
+              <tr *ngFor="let user of allUsers" [hidden]="user.id=='1'">
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td><span [ngClass]="user.active==='1'?'btn btn-success':'btn btn-warning'">{{user.active==='1'?'Active':'Inactive'}}</span></td>
+                <td><a routerLink="edit/{{user.id}}" class="btn btn-primary">Edit</a></td>
+                <td><button class="btn btn-danger" (click)="removeUser(user.id)">delete</button></td>
               </tr>
             </tbody>
           </table>

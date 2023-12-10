@@ -38,12 +38,13 @@
 
                 <div class="mb-3">
                     <input type="email" class="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder="name@example.com"
-                        [(ngModel)]="user.email" required
-                        #email="ngModel"
-                        >
-                        <div *ngIf="uname.invalid && uname.touched " class="mb-3 text-danger fw-bolder">
+                    id="exampleFormControlInput1"
+                    placeholder="name@gmail.com"
+                    name="email"
+                    [(ngModel)]="user.email" required 
+                    #email="ngModel"
+                    >
+                        <div *ngIf="email.invalid && email.touched " class="mb-3 text-danger fw-bolder">
                             Invalid Email
                         </div>
                 </div>
@@ -61,7 +62,7 @@
 
                 <div class="mt-4">
                     <button type="button" (click)="cancel()" class="btn btn-warning me-3">Chancel</button>
-                    <button type="button" [disabled]="addUserForm.invalid" class="btn btn-success">Submit</button>
+                    <button type="submit" [disabled]="addUserForm.invalid" class="btn btn-success">Submit</button>
                 </div>
             </form>
 
