@@ -1,0 +1,52 @@
+<div class="d-flex">
+    <div style="height: 89vh; width: 150px; background-color: #001861;" class="sidebar  text-light p-3 d-flex flex-column">
+        <a style="text-decoration: none; margin-top: 10px; font-weight: bold;color: white;" routerLink="/dashboard">Home</a>
+        <a style="text-decoration: none; margin-top: 10px; font-weight: bold;color: white;" routerLink="/users">Users</a>
+    </div>
+    <div class="dashboard p-3 w-100" style="width: 100%; height: auto;">
+       <div class="container" style="width: 100%; height: auto;">
+        <div class=" d-flex align-items-center justify-content-center justify-content-between">
+            <h2>Users</h2>
+            <button class="btn btn-primary" routerLink="add">New User</button>
+        </div>
+        <table class="table mt-5 border shadow">
+            <thead>
+              <tr>
+                <th scope="col">User ID</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td><a routerLink="edit/1" class="btn btn-primary">Edit</a></td>
+                <td><button class="btn btn-danger">delete</button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>mdo</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+                <td><button class="btn btn-danger">delete</button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>Thornton</td>
+                <td>mdo</td>
+                <td><button class="btn btn-primary">Edit</button></td>
+                <td><button class="btn btn-danger">delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        
+       </div>
+    </div>
+</div>
